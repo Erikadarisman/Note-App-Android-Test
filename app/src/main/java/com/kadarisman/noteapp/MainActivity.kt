@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 //            layoutManager = LinearLayoutManager(context)
 //            setHasFixedSize(true)
 //            adapter = academyAdapter
-            layoutManager = GridLayoutManager(context, 2)
+            layoutManager = GridLayoutManager(context,2)
             setHasFixedSize(true)
             adapter = adapterNote
         }

@@ -29,6 +29,7 @@ class AdapterNote(
         fun bind(item: Note){
             title.text = item.title
             desc.text = item.desc
+            // SET ON CLICK FOR CALLBACK TOAST
             card.setOnClickListener {
                 onClick.invoke(item)
             }

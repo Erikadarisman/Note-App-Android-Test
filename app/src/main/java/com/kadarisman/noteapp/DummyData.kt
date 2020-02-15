@@ -1,9 +1,10 @@
 package com.kadarisman.noteapp
 
 object DummyData {
+    val dataNote = ArrayList<Note>()
+
     fun getDataNote(): List<Note> {
 
-        val dataNote = ArrayList<Note>()
 
         dataNote.add(
             Note(
