@@ -2,6 +2,7 @@ package com.kadarisman.noteapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -20,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 //            layoutManager = LinearLayoutManager(context)
 //            setHasFixedSize(true)
 //            adapter = academyAdapter
-            layoutManager = LinearLayoutManager(context)
+            layoutManager = GridLayoutManager(context, 2)
             setHasFixedSize(true)
             adapter = adapterNote
         }
