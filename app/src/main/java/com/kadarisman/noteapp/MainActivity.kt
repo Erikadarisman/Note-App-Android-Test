@@ -1,5 +1,6 @@
 package com.kadarisman.noteapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -26,16 +27,23 @@ class MainActivity : AppCompatActivity() {
             setHasFixedSize(true)
             adapter = adapterNote
         }
-        
+
         val floatButton = floating_add
         floatButton.setOnClickListener {
-            Toast.makeText(this,"Hello World",Toast.LENGTH_SHORT).show()
+//            Toast.makeText(this,"Hello World",Toast.LENGTH_SHORT).show()
+            addNote()
         }
+
 
     }
 
     private fun onClick(data: Note){
         Toast.makeText(this,"{$data}",Toast.LENGTH_SHORT).show()
+    }
+
+    private fun  addNote(){
+        val intent = Intent(this,AddNoteController::class.java)
+        startActivity(intent)
     }
 
 
