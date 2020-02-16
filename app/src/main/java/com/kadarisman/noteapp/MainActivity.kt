@@ -22,12 +22,14 @@ class MainActivity : AppCompatActivity() {
             ::onClick
         )
         RV_content.apply {
-//            layoutManager = LinearLayoutManager(context)
-//            setHasFixedSize(true)
-//            adapter = academyAdapter
             layoutManager = GridLayoutManager(context,2)
             setHasFixedSize(true)
             adapter = adapterNote
+        }
+        
+        val floatButton = floating_add
+        floatButton.setOnClickListener {
+            Toast.makeText(this,"Hello World",Toast.LENGTH_SHORT).show()
         }
 
     }
