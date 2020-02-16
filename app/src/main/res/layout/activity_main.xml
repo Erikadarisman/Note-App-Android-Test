@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:layout_weight="1"
+        android:id="@+id/pull_refresh">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/RV_content"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:itemCount="@tools:sample/last_names"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="@tools:sample/last_names"/>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/floating_add"
@@ -21,4 +29,4 @@
         android:layout_margin="16dp"
         app:srcCompat="@android:drawable/ic_input_add"/>
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>
