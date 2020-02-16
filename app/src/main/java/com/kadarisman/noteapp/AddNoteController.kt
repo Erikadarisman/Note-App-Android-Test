@@ -13,7 +13,9 @@ class AddNoteController : AppCompatActivity() {
 
         val buttonPost = bt_post_note
         buttonPost.setOnClickListener {
-            Toast.makeText(this,"Post Note!!",Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"Post Note!!!!",Toast.LENGTH_LONG).show()
+            DummyData.addNote("hello World","skuyy living")
+            println("tessss")
         }
     }
 }
