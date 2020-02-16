@@ -2,7 +2,6 @@ package com.kadarisman.noteapp
 
 object DummyData {
     val dataNote = ArrayList<Note>()
-    var no = 1
 
     fun getDataNote(): List<Note> {
 
@@ -34,9 +33,8 @@ object DummyData {
     }
 
     fun addNote(title: String, description: String){
-        dataNote.add(Note("${title}${no}",description))
+        dataNote.add(Note(title,description))
         println(dataNote)
-        no++
     }
 
 }

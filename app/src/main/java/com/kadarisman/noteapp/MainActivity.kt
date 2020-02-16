@@ -51,9 +51,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun  addNote(){
-//        val intent = Intent(this,AddNoteController::class.java)
-//        startActivity(intent)
-        DummyData.addNote("hello World","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.")
+        val intent = Intent(this,AddNoteController::class.java)
+        startActivity(intent)
+//        DummyData.addNote("hello World","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.")
 
     }
 
