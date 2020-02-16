@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
 
         list.addAll(data)
 
-        val adapterNote = AdapterNote(
+        var adapterNote = AdapterNote(
             list,
             ::onClick
         )
@@ -34,6 +34,15 @@ class MainActivity : AppCompatActivity() {
             addNote()
         }
 
+        val refresh = pull_refresh
+        refresh.setOnRefreshListener {
+            adapterNote.notifyDataSetChanged()
+            println("update")
+            list.clear()
+            list.addAll(data)
+            refresh.isRefreshing = false
+        }
+
 
     }
 
@@ -42,9 +51,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun  addNote(){
-        val intent = Intent(this,AddNoteController::class.java)
-        startActivity(intent)
-    }
+//        val intent = Intent(this,AddNoteController::class.java)
+//        startActivity(intent)
+        DummyData.addNote("hello World","skuyy living")
 
+    }
 
 }
