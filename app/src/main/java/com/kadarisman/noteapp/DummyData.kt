@@ -34,7 +34,7 @@ object DummyData {
     }
 
     fun addNote(title: String, description: String){
-        dataNote.add(Note("${title}${no}","${description}"))
+        dataNote.add(Note("${title}${no}",description))
         println(dataNote)
         no++
     }
